@@ -645,6 +645,7 @@ ul {
 .footer-mail-title{
   font-size: 14px;
     line-height: 1.14;
+    font-weight: 500;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--wait-color);
@@ -1020,7 +1021,7 @@ opacity:1;
   margin-right: 7px;
 }
 .modal-checkbox:checked + .modal-checkbox-label::before {
-  background-image:url(../images/itoms/icon-check.svg);
+  background-image: url(../images/itoms/icon-check.svg);
   background-size: cover;
   border: none;
 }
