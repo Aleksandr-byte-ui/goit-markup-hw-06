@@ -5,9 +5,10 @@
   --wait-color: #ffffff;
   --text-gray: #757575;
   --color-names: #212121;
-  --color-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --color-shadow:box-shadow:0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
    --main-duration: 250ms;
    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   --hover-button-backcolor:#188ce8;
 }
 
 
@@ -626,8 +627,61 @@ ul {
 .footer-social-icon {
     fill:var(--wait-color);
 }
-
-
+.mail-foter{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.footer-input{
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: var(--wait-color);
+    padding-left: 16px;
+}
+.footer-mail-title{
+  font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--wait-color);
+    margin-left: 93px;
+}
+.footer-button{
+  position: relative;
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color:var(--wait-color);
+    background-color:var(--acsent-color);
+    border-radius: 4px;
+    cursor: pointer;
+    padding-left: 29px;
+    padding-right: 62px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    transition: background-color var(--main-duration) var(--color-shadow);
+}
+.footer-button:hover,
+.footer-button:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color:var(--hover-button-backcolor);
+}
+.footer-input-logo{
+position: absolute;
+top: 13px;
+right: 28px;
+width: 24px;
+height: 24px;
+}
 /*----Подвал---*/
 
 /*index.html*/
@@ -834,7 +888,13 @@ opacity:1;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: transparent;
+  cursor: pointer;
 }
+ .modal-icon-close:hover,
+ .modal-icon-close:focus {
+  fill: var(--acsent-color);
+}
+
 .model-form{
   display: flex;
   flex-direction: column;
@@ -871,6 +931,11 @@ opacity:1;
 .modal-form-button {
   align-self: center;
 }
+.modal-form-button:hover,
+.modal-form-button:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: #0e83e2
+}
 .modal-form-input{
   width: 100%;
   height: 40px;
@@ -882,6 +947,9 @@ opacity:1;
   outline: none;
   border-color:var(--acsent-color);
   cursor: pointer;
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--acsent-color);
 }
 .modal-span {
   position: relative;
@@ -896,7 +964,7 @@ opacity:1;
   display: block;
   width: 18px;
   height: 18px;
-  background-color: var(--secondary-color);
+  background-color:var(--secondery-font);
 }
 .modal-form-message {
   width: 100%;
@@ -950,5 +1018,13 @@ opacity:1;
   border-radius: 2px;
   cursor: pointer;
   margin-right: 7px;
+}
+.modal-checkbox:checked + .modal-checkbox-label::before {
+  background-image:url(../images/itoms/icon-check.svg);
+  background-size: cover;
+  border: none;
+}
+.modal-checkbox:focus + .modal-checkbox-label::before {
+  outline: 1px solid var(--acsent-color);
 }
 /*---beckdrop----------------*/
