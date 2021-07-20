@@ -256,7 +256,8 @@ img {
 /*----Описаниу---*/
 .list-conteiner {
   display: flex;
-  justify-content: space-between;
+  padding-left: 0;
+    margin-left: 0;
 }
 .hero-conteiner {
   padding-top: 94px;
@@ -268,17 +269,12 @@ img {
   Height:75px;
 }
 .list-itom {
-display:block;
-height: 120px;
-background-size:70px 70px;
-background-repeat: no-repeat;
-background-position: 50% 50% ;
-background-color: #F5F4FA;
-border-radius: 4px;
-margin-bottom: 30px;
-margin-right: 30px;
+  flex-basis: calc((100%-120) / 4);
+  width:270px;
 }
-
+.list-itom:not(:first-child){
+  margin-left: 30px;
+}
 .description {
   font-weight: 400;
   font-size: 14px;
@@ -1022,7 +1018,7 @@ opacity:1;
 }
 .modal-checkbox:checked + .modal-checkbox-label::before{
   background-image: url(../images/itoms/icon-check.svg);
-  background-size: cover;
+  background-size:15px 14px;
   border: none;
 }
 .modal-checkbox:focus + .modal-checkbox-label::before {
